@@ -98,9 +98,9 @@ namespace WpfRadialBlur
                                 }
                                 else if (depth == 4)
                                 {
-                                    destImg[offset] = c.R;
+                                    destImg[offset] = c.B;
                                     destImg[offset + 1] = c.G;
-                                    destImg[offset + 2] = c.B;
+                                    destImg[offset + 2] = c.R;
                                     destImg[offset + 3] = c.A;
                                 }
                                 else

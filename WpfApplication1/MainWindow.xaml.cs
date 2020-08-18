@@ -32,7 +32,7 @@ namespace WpfRadialBlur
         {
             try
             {
-                var img = Image.FromFile("dread.png");
+                var img = Image.FromFile("cat.png");
                 Bitmap bmp = null;
                 bmp = new Bitmap(img);
                 bmp = RadialBlur.Blur(bmp, 10);
@@ -49,7 +49,7 @@ namespace WpfRadialBlur
         {
             try
             {
-                var img = Image.FromFile("dread.png");
+                var img = Image.FromFile("cat.png");
                 Bitmap bmp = null;
                 bmp = new Bitmap(img);
                 bmp = RadialBlurOld.Blur(bmp, 10);
@@ -78,7 +78,7 @@ namespace WpfRadialBlur
         {
             try
             {
-                var img = Image.FromFile("dread.png");
+                var img = Image.FromFile("cat.png");
                 Bitmap bmp =null;
                 var rbt = new RadialBlurThreaded();
                 var sw =new Stopwatch();

@@ -36,9 +36,9 @@ namespace WpfRadialBlur
                         try
                         {
                             var offset = (y * destImg.Width + x) * (depth);
-                            buffer[offset] = c.R;
+                            buffer[offset] = c.B;
                             buffer[offset + 1] = c.G;
-                            buffer[offset + 2] = c.B;
+                            buffer[offset + 2] = c.R;
                             buffer[offset + 3] = c.A;
                         }
                         catch (Exception e)
