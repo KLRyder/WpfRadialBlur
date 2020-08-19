@@ -22,7 +22,7 @@ namespace WpfRadialBlur
             Marshal.Copy(data.Scan0, buffer, 0, buffer.Length);
 
             var centerPoint = new Vector(bmp.Width / 2.0, bmp.Height / 2.0);
-            
+
             for (var x = 0; x < destImg.Width; x++)
             {
                 var directionVector = DirectionVector(x, bmp, centerPoint);
@@ -76,8 +76,12 @@ namespace WpfRadialBlur
 
         public static Bitmap Blur(Bitmap bmp, int str)
         {
+            //scale the strength of a blur based off of the diagonal lenght of an image. 420 was chosen as it was the
+            //diagonal lenght of an image that worked well in terms of blur strength
+            var newStr = (int) Math.Ceiling(str * 420 / Math.Sqrt(bmp.Height * bmp.Height + bmp.Width * bmp.Width));
+
             var toReturn = ConvertToRadial(bmp);
-            toReturn.img = OneDimentionalBoxBlur(toReturn.img, str);
+            toReturn.img = OneDimentionalBoxBlur(toReturn.img, newStr);
             return ConvertFromRadial(toReturn);
         }
 
