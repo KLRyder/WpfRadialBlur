@@ -8,7 +8,7 @@
     <StackPanel>
         <WrapPanel Margin="10" HorizontalAlignment="Center">
             <Button Name="BtnLoadFromFile" Margin="0,0,20,0" Click="BtnLoadFromResourceThreaded_Click">multi</Button>
-            <Button Name="BtnLoadFromResource" Click="BtnLoadFromResource_Click">single</Button>
+            <Button Name="BtnLoadFromResource" Click="BtnLoadFromResource_Click">uni</Button>
         </WrapPanel>
         <Image Name="ImgDynamic" Margin="10"  />
     </StackPanel>
